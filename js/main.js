@@ -107,3 +107,11 @@
     
 })(jQuery);
 
+function signup() {
+    // Perform signup process here
+    // For demonstration purpose, simply showing popup
+    document.getElementById('overlay').style.display = 'flex';
+    setTimeout(function(){
+        document.getElementById('overlay').style.display = 'none';
+    }, 3000); // Hide popup after 3 seconds
+}
