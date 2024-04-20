@@ -29,7 +29,28 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .popup {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 
 <body>
@@ -89,7 +110,7 @@
                 <h1 class="mb-5">Contact For Any Query</h1>
             </div>
             <div class="row g-4">
-                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                 <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h5>Get In Touch</h5>
                     <div class="d-flex align-items-center mb-3">
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-dark"
@@ -97,8 +118,8 @@
                             <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-dark">Location: </h5>
-                            <p class="mb-0"></p>
+                            <h5 class="text-dark" style="font-size:medium ;">ST1300, PARAS TIEREA, GH - 01 SECTOR 137, EXPRESSWAY NOIDA, Gautam Buddha Nagar- 201305, Uttar Pradesh </h5>
+                            <p class="mb-0"> </p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -107,7 +128,7 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-dark">Mobile: </h5>
+                            <h5 class="text-dark" style="font-size:medium ;">+91-7003423812 </h5>
                             <p class="mb-0"></p>
                         </div>
                     </div>
@@ -117,42 +138,42 @@
                             <i class="fa fa-envelope-open text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-dark">Email: </h5>
+                            <h5 class="text-dark" style="font-size:medium ;">info@pmiusservices.com </h5>
                             <p class="mb-0"></p>
                         </div>
                     </div>
-                </div> -->
+                </div> 
                 
-                <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 150px"></textarea>
+                                        style="height: 150px" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-dark w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-dark w-100 py-3" type="submit" onclick="contact()">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -169,8 +190,8 @@
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="about">About Us</a>
-                    <a class="btn btn-link" href="contact">Contact Us</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="refund.html">Refund Policy</a>
                     <a class="btn btn-link" href="policy.html">Privacy Policy</a>
                     <a class="btn btn-link" href="termcondition.html">Terms & Condition</a>
                 </div>
@@ -179,6 +200,7 @@
                     <!-- <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i></p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i></p> -->
                     <p class="mb-2"><i class="fa fa-envelope "></i> info@pmiusservices.com</p>
+                    <p class="mb-2"><i class="fa-solid fa-phone"></i> +91-7003423812 </p>
                     <!-- <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -213,9 +235,10 @@
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0  py-3 ps-4 pe-5" required type="text" placeholder="Your email">
-                        <button type="button" onclick="btnclick()"
+                        <button type="button" onclick="popup()"
                             class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
                     </div>
+                   
                 </div>
             </div>
         </div>

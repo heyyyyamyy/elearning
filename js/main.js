@@ -115,3 +115,12 @@ function signup() {
         document.getElementById('overlay').style.display = 'none';
     }, 3000); // Hide popup after 3 seconds
 }
+
+
+function popup(){
+    alert("Sign Up Successful!")
+}
+
+function contact(){
+    alert("Your query has been sent")
+}
